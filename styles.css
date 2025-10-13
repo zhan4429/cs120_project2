@@ -34,7 +34,7 @@ h1 {
   width: 80px;
   height: 80px;
   box-sizing: border-box;
-  padding: 5px 5px;
+
   font-size: 18px;
   background-color: white;
   justify-content: center;
@@ -103,13 +103,22 @@ button {
   display: none;
 }
 
+.footer {
+  max-width: 80%;
+  font-size: 0.9rem;
+}
+
 @media (max-width: 600px) {
+  body {
+    padding: 0 5px;
+  }
   h1 {
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   #game-board {
     gap: 4px;
+    max-width: 80%;
   }
   .cell {
     position: relative;
@@ -120,7 +129,7 @@ button {
   #keyboard {
     margin-top: 50px;
     margin-bottom: 20px;
-    max-width: 560px;
+    max-width: 90%;
   }
   .key {
     width: 50px;
@@ -129,5 +138,8 @@ button {
   }
   .wide-key {
     width: 100px;
+  }
+  .footer {
+    max-width: 50%;
   }
 }
