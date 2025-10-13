@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Wordle: The Definitive Guess</h1>
+    <div id="game-board"></div>
+    <div id="keyboard"></div>
+    <form id="guess-form" onsubmit="return validate()">
+      <div id="check-guess">
+        <input type="text" name="guess" size="10" id="guess-input" />
+        <button id="guess-button" type="submit">Check my Guess</button>
+        <div id="hint" style="margin-top: 5px; color: green">
+          Please type a 5-letter word!
+        </div>
+      </div>
+    </form>
+    <button
+      class="hide"
+      id="restart-button"
+      onclick="restartGame()"
+      style="
+        color: green;
+        font-weight: bold;
+        width: 180px;
+        height: 60px;
+        font-size: 24px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+      "
+    >
+      Restart Game
+    </button>
+    <script src="index.js" charset="utf-8"></script>
+    <footer>
+      <p>
+        Project Wordle | Created by Yucheng Zhang for Tufts University CS 120:
+        Web Programming & Engineering
+      </p>
+    </footer>
+  </body>
+</html>

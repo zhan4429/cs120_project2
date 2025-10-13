@@ -7,28 +7,46 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-.game-board {
+
+h1 {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: green;
+}
+
+#game-board {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   gap: 8px;
-  padding-top: 40px;
+  padding-top: 10px;
   width: 100%;
+  max-width: 480px;
   height: auto;
-  max-width: 400px;
 }
-.cell {
+.cell,
+.key {
+  display: flex;
   aspect-ratio: 1 / 1;
-  border: 2px solid #000;
+  border: 1px solid #383b3d;
   border-radius: 8px;
-  border: 2px solid #ccc;
   position: relative;
   width: 80px;
   height: 80px;
   box-sizing: border-box;
+  padding: 5px 5px;
+  font-size: 18px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
 }
 
-.keyboard {
-  margin-top: 50px;
+.wide-key {
+  width: 120px;
+}
+#keyboard {
+  margin-top: 20px;
+  margin-bottom: 10px;
   max-width: 600px;
 }
 
@@ -38,4 +56,78 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+  gap: 6px;
+  padding: 0 10px;
+}
+
+.check-guess {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+#guess-input {
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 18px;
+  padding: 5px;
+  width: 100px;
+}
+button {
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.correct {
+  background-color: #6aaa64;
+}
+
+.present {
+  background-color: yellow;
+}
+
+.wrong {
+  background-color: #787c7e;
+  color: white;
+}
+
+#hint {
+  margin-bottom: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #game-board {
+    display: grid;
+    gap: 4px;
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+  }
+  .cell {
+    position: relative;
+    box-sizing: border-box;
+    padding: 1px 1px;
+    font-size: 16px;
+  }
+  #keyboard {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    max-width: 560px;
+  }
+  .key {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+  }
+  .wide-key {
+    width: 100px;
+  }
 }
