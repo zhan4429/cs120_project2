@@ -34,7 +34,6 @@ h1 {
   width: 80px;
   height: 80px;
   box-sizing: border-box;
-
   font-size: 18px;
   background-color: white;
   justify-content: center;
@@ -118,28 +117,34 @@ button {
   }
   #game-board {
     gap: 4px;
-    max-width: 80%;
   }
   .cell {
     position: relative;
     box-sizing: border-box;
     padding: 1px 1px;
     font-size: 16px;
+    width: 100%;
+    height: 100%;
   }
   #keyboard {
     margin-top: 50px;
     margin-bottom: 20px;
-    max-width: 90%;
+    max-width: 95%;
   }
   .key {
-    width: 50px;
+    flex-grow: 1;
+    flex-basis: 0;
+    width: auto;
     height: 50px;
-    font-size: 14px;
+    font-size: 12px;
+    border-radius: 4px;
   }
   .wide-key {
     width: 100px;
+    flex-grow: 1.5;
+    padding: 0 3px;
   }
-  .footer {
-    max-width: 50%;
+  footer p {
+    font-size: 0.8rem;
   }
 }
