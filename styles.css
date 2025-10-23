@@ -14,6 +14,13 @@ h1 {
   color: green;
 }
 
+#stats {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: goldenrod;
+}
+
 #game-board {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
